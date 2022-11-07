@@ -1,0 +1,33 @@
+package Assesment_1;
+
+/*1 Write a Java program to count unique characters in a string.
+Note: Use Scanner util to read input from stdin.*/
+
+import java.util.*;
+
+public class StringUniqueChar {
+
+		static int UniqueCount(String str)
+		{
+			HashSet<Character> s = new HashSet<Character>();
+	
+			for(int i = 0; i < str.length(); i++)
+			{			
+				s.add(str.charAt(i));
+			}
+
+			return s.size();
+		}
+
+		public static void main(String args[])
+		{
+			Scanner scan = new Scanner(System.in);
+
+			System.out.println("Enter the String of your choice: ");
+			String string = scan.nextLine();
+			System.out.print(UniqueCount(string));
+			scan.close();
+		}
+	}
+
+
